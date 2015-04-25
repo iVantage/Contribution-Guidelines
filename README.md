@@ -7,10 +7,11 @@
 ## Before You Start
 
 We welcome contributions! However, before you begin working on a new feature
-please create an issue requesting that feature in the respective project and
-indicate that you would like to implement that feature. This does two things:
+please create an issue requesting that feature in the respective project's
+issue tracker and indicate that you would like to implement that feature. This
+does two things:
 
-1. It can save us from duplicating effort. We may already be working on that
+1. It saves us from duplicating effort. We may already be working on that
    feature or something similar which serves the same use case.
 2. It saves you from wasting time if this is not a feature we would like to add
    to the project.
@@ -26,15 +27,42 @@ the appropriate tool. Usually there will be an accompanying grunt or gulp task
 to run those checks.
 
 
-## Commit Messages
+## Commit Message Guidelines
 
-*(todo)*
+In general our commit messages follow the following format:
+
+```
+<type>: <summary>
+<empty line>
+<details>
+```
+
+The entire first line (the summary line) should be no more than 80 characters.
+
+Possible *type*s include:
+
+- chore - E.g. updating build routines
+- test - Adding, removing, fixing tests
+- feature - Adding a new feature
+- fix - Correcting broken functionality
+- style - Cleaning up style, e.g. linting or appeasing jscs
+- docs - Making edits to the documentation
+
+There should be one blank line between the summary and description. If your
+commit closes or refences any existing issues be sure to [make reference to
+that issue in the message description][github-civcm].
 
 
 ## Tests
 
-*(todo)*
+Most projects have existing tests so please run them before submitting a PR :),
+and be sure to add new tests when adding of changing functionality. Mosts tests
+can be run with `npm run`, otherwise instructions will be laid out in the
+project's README... if it's not clear how to run tests (or worse, you aren't
+even sure tests exist) feel free to create an issue.
+
 
 [editor-config]: http://editorconfig.org/
 [jshint]: http://jshint.com/about/
 [jscs]: http://jscs.info/
+[github-civcm]: https://help.github.com/articles/closing-issues-via-commit-messages/
