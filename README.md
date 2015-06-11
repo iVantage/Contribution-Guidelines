@@ -37,8 +37,6 @@ In general our commit messages follow the following format:
 <details>
 ```
 
-The entire first line (the summary line) should be no more than 80 characters.
-
 Possible *type*s include:
 
 - chore - E.g. updating build routines
@@ -51,9 +49,31 @@ Possible *type*s include:
   actions such as deleting branches that have been fully reintegrated. Don't use
   `admin` if you are making source code changes.
 
-There should be one blank line between the summary and description. If your
-commit closes or refences any existing issues be sure to [make reference to
-that issue in the message description][github-civcm].
+The *type* should be all lower case and the first letter of *summary* should be
+upper case.
+
+Use an imperative mood and present tense for your summary (i.e. they should
+sound read commands):
+
+**Bad**: *Updated the bangs to whiz*<br />
+**Good**: *Make the bangs whiz*
+
+There should be one blank line between the summary and description. All lines
+should be no longer than 80 characters.
+
+If your commit closes or references any existing issues be sure to [make
+reference to that issue in the message description][github-civcm].
+
+#### Full Example
+
+```
+feature: Make the bangs whiz
+
+If the user was not equipped to handle whirs they could not use this app. This
+commit makes it whiz as well.
+
+Closes #98
+```
 
 
 ## Tests
