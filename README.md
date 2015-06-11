@@ -47,6 +47,9 @@ Possible *type*s include:
 - fix - Correcting broken functionality
 - style - Cleaning up style, e.g. linting or appeasing jscs
 - docs - Making edits to the documentation
+- admin - This commit type is reserved for `svn` repos and should be used for
+  actions such as deleting branches that have been fully reintegrated. Don't use
+  `admin` if you are making source code changes.
 
 There should be one blank line between the summary and description. If your
 commit closes or refences any existing issues be sure to [make reference to
