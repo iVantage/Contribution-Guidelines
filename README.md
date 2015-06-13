@@ -54,7 +54,7 @@ The *type* should be all lower case and the first letter of *summary* should be
 upper case.
 
 Use an imperative mood and present tense for your summary (i.e. they should
-sound read commands):
+read like commands):
 
 **Bad**: *Updated the bangs to whiz*<br />
 **Good**: *Make the bangs whiz*
