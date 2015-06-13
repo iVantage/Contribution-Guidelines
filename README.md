@@ -81,7 +81,7 @@ Closes #98
 
 Most projects have existing tests so please run them before submitting a PR :),
 and be sure to add new tests when adding of changing functionality. Mosts tests
-can be run with `npm run`, otherwise instructions will be laid out in the
+can be run with `npm test`, otherwise instructions will be laid out in the
 project's README... if it's not clear how to run tests (or worse, you aren't
 even sure tests exist) feel free to create an issue.
 
