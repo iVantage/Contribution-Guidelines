@@ -32,43 +32,71 @@ to run those checks.
 In general our commit messages follow the following format:
 
 ```
-<type>: <summary>
+<type>(scope): <summary>
 <empty line>
-<details>
+<description>
 ```
+
+Any line in the commit message should be *no longer than 80 characters*.
+
+Platforms like Github and Bitbucket will pre-fill commit messages with
+generic templates when merging pull requests. Please take the time when
+merging your pull request to replace this with a nice commit message that
+follows our format.
+
+### Type
 
 Possible *type*s include:
 
-- chore - E.g. updating build routines
-- test - Adding, removing, fixing tests
-- feature - Adding a new feature
-- fix - Correcting broken functionality
-- style - Cleaning up style, e.g. linting or appeasing jscs
+- chore - Changes only to supporting tooling, no production code changes.
+  E.g. updating build routines
 - docs - Making edits to the documentation
-- refactor - Just like it used to be but better
+- feat - Adding a new feature
+- fix - Correcting broken functionality
+- perf - Code changes to improve performance
+- refactor - Just like it used to be but better. All code changes that are
+  not features, fixes, or performance improvements fit into this category
+- style - Cleaning up style, e.g. linting, formatting, whitespace
+- test - Adding, removing, fixing tests
 - admin - This commit type is reserved for `svn` repos and should be used for
   actions such as deleting branches that have been fully reintegrated. Don't use
   `admin` if you are making source code changes.
 
-The *type* should be all lower case and the first letter of *summary* should be
-upper case.
+The *type* should be all lower case.
 
+### Scope (optional)
+
+If your commit closes or references a Jira ticket or Github issue, the *scope*
+should be the relevant issue number.
+
+For example:
+
+- Jira ticket - `feat(IVH-1234)`
+- Github issue - `feat(#1234)`
+
+### Summary
+
+The first letter of *summary* should be upper case.
 Use an imperative mood and present tense for your summary (i.e. they should
 read like commands):
 
 **Bad**: *Updated the bangs to whiz*<br />
 **Good**: *Make the bangs whiz*
 
-There should be one blank line between the summary and description. All lines
-should be no longer than 80 characters.
+### Description (optional)
 
-If your commit closes or references any existing issues be sure to [make
+The description can contain any additional details you would like
+to provide, e.g. the motivation or context for the change.
+
+There should be one blank line between the summary and description.
+
+If your commit closes any existing Github issue be sure to [make
 reference to that issue in the message description][github-civcm].
 
-#### Full Example
+### Full Example
 
 ```
-feature: Make the bangs whiz
+feat(#98): Make the bangs whiz
 
 If the user was not equipped to handle whirs they could not use this app. This
 commit makes it whiz as well.
